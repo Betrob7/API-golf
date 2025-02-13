@@ -9,8 +9,8 @@ async function searchListener(search) {
         if (!playerName) return;
     
         let players = await fetchPlayers();
-        let matchedPlayers = players.filter(player => 
-        player.Name.toLowerCase().includes(playerName)) // Matcha sökningen
+        let matchedPlayers = players.filter(player => //.filter skapar en ny array där bara spelare som uppfyller villkoret finns kvar
+        player.Name.toLowerCase().includes(playerName)) 
         
         
         displayResults(matchedPlayers);
